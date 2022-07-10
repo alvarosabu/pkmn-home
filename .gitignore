@@ -1,0 +1,6 @@
+node_modules
+.npmrc
+.DS_Store
+apps/.DS_Store
+packages/.DS_Store
+.pnpm-store/
