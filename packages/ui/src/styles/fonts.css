@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Kakugo';
+  font-weight: 400;
+  src: local('UDKakugo-L'), url(/fonts/UDKakugo-L.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Kakugo';
+  font-weight: 500;
+  src: local('UDKakugo-M'), url(/fonts/UDKakugo-M.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Kakugo';
+  font-weight: 600;
+  src: local('UDKakugo-DB'), url(/fonts/UDKakugo-DB.otf) format('opentype');
+}
+
+body {
+  @apply font-sans;
+}

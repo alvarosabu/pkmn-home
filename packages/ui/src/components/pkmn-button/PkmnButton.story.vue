@@ -15,7 +15,7 @@ const state = reactive({
       width: 200,
     }"
   >
-    <Variant>
+    <Variant title="playground">
       <PkmnButton :disabled="state.disabled" :label="state.label" />
     </Variant>
   </Story>

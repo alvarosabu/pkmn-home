@@ -31,8 +31,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'AsUI',
-      fileName: 'as-ui',
+      name: 'PkmnUI',
+      fileName: 'pkmn-ui',
     },
     watch: {
       include: [resolve(__dirname, 'src')],
