@@ -52,5 +52,5 @@ const styles = computed(() => ({
 }))
 </script>
 <template>
-  <img :src="sprite" :styles="styles" />
+  <img :src="sprite" :style="styles" />
 </template>
