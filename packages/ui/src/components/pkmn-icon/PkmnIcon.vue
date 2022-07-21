@@ -22,10 +22,6 @@ const props = defineProps({
     default: false,
     type: Boolean,
   },
-  icon: {
-    default: false,
-    type: Boolean,
-  },
   animated: {
     default: false,
     type: Boolean,
