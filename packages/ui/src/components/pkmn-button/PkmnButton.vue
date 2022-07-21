@@ -30,7 +30,7 @@ defineProps({
 <style>
 .pkmn-button {
   @apply bg-primary-800 text-white border-4 border-transparent hover:(bg-primary-900 border-gray-200);
-  @apply inline-block rounded-full py-1.5 px-2.5;
+  @apply inline-block rounded-full py-1.5 px-5;
   @apply font-sans font-semibold;
   @apply transition-all duration-300 disabled:opacity-20 cursor-pointer decoration-none;
 }
