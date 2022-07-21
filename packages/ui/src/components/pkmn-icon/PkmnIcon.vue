@@ -7,7 +7,7 @@ const props = defineProps({
     type: Number,
   },
   size: {
-    default: 100,
+    default: 64,
     type: Number,
   },
   shiny: {
@@ -19,6 +19,14 @@ const props = defineProps({
     type: String,
   },
   egg: {
+    default: false,
+    type: Boolean,
+  },
+  icon: {
+    default: false,
+    type: Boolean,
+  },
+  animated: {
     default: false,
     type: Boolean,
   },
@@ -43,14 +51,35 @@ const sprite = computed(() => {
   if (props.egg) {
     spriteIcon = 'egg'
   }
-  return `/pokemons/sprites/${spriteIcon}.png`
+  return `/pokemons/icons/icon${spriteIcon}.png`
 })
 
 const styles = computed(() => ({
+  backgroundImage: `url(${sprite.value})`,
+  backgroundSize: 'cover',
   width: `${props.size}px`,
   height: `${props.size}px`,
 }))
 </script>
+
 <template>
-  <img :src="sprite" :styles="styles" />
+  <div class="pkmn-icon" :class="{ animated: animated }" :style="styles" />
 </template>
+
+<style>
+:root {
+  --sprite-size: v-bind(size);
+}
+.pkmn-icon.animated {
+  animation: moveX 1s steps(2) infinite;
+}
+
+@keyframes moveX {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: calc(var(--3252fa55-size) * 2px);
+  }
+}
+</style>
