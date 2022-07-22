@@ -15,7 +15,6 @@ const props = defineProps({
     type: Boolean,
   },
   form: {
-    default: null,
     type: String,
   },
   egg: {

@@ -5,7 +5,7 @@ import PkmnIcon from './PkmnIcon.vue'
 const state = reactive({
   nationalDex: 1,
   shiny: false,
-  form: null,
+  form: undefined,
   egg: false,
   size: 100,
 })

@@ -36,22 +36,22 @@ const paddedDex = computed(() =>
     : props.nationalDex,
 )
 
-const sprite = computed(() => {
-  let spriteIcon = paddedDex.value
+const icon = computed(() => {
+  let sprite = paddedDex.value
   if (props.shiny) {
-    spriteIcon += 's'
+    sprite += 's'
   }
   if (props.form) {
-    spriteIcon += `_${props.form}`
+    sprite += `_${props.form}`
   }
   if (props.egg) {
-    spriteIcon = 'egg'
+    sprite = 'egg'
   }
-  return `/pokemons/icons/icon${spriteIcon}.png`
+  return `/pokemons/icons/icon${sprite}.png`
 })
 
 const styles = computed(() => ({
-  backgroundImage: `url(${sprite.value})`,
+  backgroundImage: `url(${icon.value})`,
   backgroundSize: 'cover',
   width: `${props.size}px`,
   height: `${props.size}px`,

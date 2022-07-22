@@ -5,7 +5,7 @@ import PkmnSprite from './PkmnSprite.vue'
 const state = reactive({
   nationalDex: 1,
   shiny: false,
-  form: null,
+  form: undefined,
   egg: false,
   size: 100,
   icon: false,

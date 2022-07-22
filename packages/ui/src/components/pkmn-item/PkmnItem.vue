@@ -12,7 +12,9 @@ const props = defineProps({
   },
 })
 
-const item = computed(() => `/items/${props.internalName.toLowerCase().replace(/\s/g, '')}.png`)
+const item = computed(
+  () => `/items/${props.internalName.toLowerCase().replace(/\s/g, '')}.png`,
+)
 
 const styles = computed(() => ({
   width: `${props.size}px`,

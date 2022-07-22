@@ -1,7 +1,22 @@
 {
   "name": "@pkmn-home/ui",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/pkmn-ui.umd.cjs",
+  "module": "./dist/pkmn-ui.js",
+  "exports": {
+    ".": {
+      "import": "./dist/pkmn-ui.js",
+      "require": "./dist/pkmn-ui.umd.cjs"
+    },
+    "./styles": "./dist/style.css",
+    "./theme": "./styles/theme.css",
+    "./": "./dist/pkmn-ui.js"
+  },
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",

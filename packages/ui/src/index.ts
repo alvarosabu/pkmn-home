@@ -9,7 +9,7 @@ import PkmnWebFontsOptions from './styles/fonts'
 import PkmnIconsOptions from './styles/icons'
 import { PkmnTheme } from './styles/theme'
 
-const modules = import.meta.globEager('./components/**/!(*.spec|*.test|*.story).vue')
+const modules = import.meta.glob('./components/**/!(*.spec|*.test|*.story).vue', { eager: true })
 const components = Object.entries(modules)
 
 export default {
@@ -21,9 +21,22 @@ export default {
     typhography:PkmnTypographyOptions,
     rules:PkmnRules, */
   },
-  install(app: App) {
-    components.forEach(([name, component]) => {
-      app.component(name, component)
-    })
+  install(app: App, options: any) {
+    if (typeof options === 'undefined') {
+      for (const [key, value] of components) {
+        app.component(key.replace(/^.*[\\/]/, '').replace('.vue', ''), (value as any).default)
+      }
+    } else {
+      if (!(options instanceof Array)) {
+        throw new TypeError('options must be an array')
+      }
+      for (const [key, value] of components) {
+        const componentName = key.replace(/^.*[\\/]/, '').replace('.vue', '')
+        // register only components specified in the options
+        if (options.includes(componentName)) {
+          app.component(componentName, (value as any).default)
+        }
+      }
+    }
   },
 }
