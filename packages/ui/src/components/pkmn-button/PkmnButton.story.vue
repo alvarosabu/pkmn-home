@@ -17,6 +17,13 @@ const state = reactive({
   >
     <Variant title="playground">
       <PkmnButton :disabled="state.disabled" :label="state.label" />
+
+      <template #controls="{ state }">
+        <HstSelect v-model="state.variant" title="Variant" :options="['awiwi', 'composable']" />
+      </template>
+    </Variant>
+    <Variant title="disabled">
+      <PkmnButton :disabled="true" :label="state.label" />
     </Variant>
   </Story>
 </template>
