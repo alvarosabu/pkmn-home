@@ -84,9 +84,9 @@ export const PkmnTheme = {
   colors: {
     primary,
     secondary,
-    typeColors,
-    pokeballColors,
-    miscColors,
+    ...typeColors,
+    ...pokeballColors,
+    ...miscColors,
   },
   breakpoints: {
     xs: '320px',

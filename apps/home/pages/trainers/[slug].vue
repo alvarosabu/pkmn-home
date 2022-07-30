@@ -8,7 +8,7 @@ const { data: trainer } = await useAsyncData(`content-${path}`, () => {
 })
 </script>
 <template>
-  <main class="container flex justify-between mx-auto sm:pt-40">
+  <main class="container flex justify-between mx-auto sm:pt-20">
     <ContentDoc class="w-2/3 prose px-4" />
     <div class="w-1/3 bg-primary-500 p-4 rounded prose">
       <h2 class="font-bold text-white mb-8 important-mt-0">{{ trainer.name }}</h2>
