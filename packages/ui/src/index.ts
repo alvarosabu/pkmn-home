@@ -7,6 +7,7 @@ import '@unocss/reset/tailwind.css'
 import './styles/base.css'
 import PkmnWebFontsOptions from './styles/fonts'
 import PkmnIconsOptions from './styles/icons'
+import PkmnTypographyOptions from './styles/typography'
 import { PkmnTheme } from './styles/theme'
 
 const modules = import.meta.glob('./components/**/!(*.spec|*.test|*.story).vue', { eager: true })
@@ -17,6 +18,7 @@ export default {
     theme: PkmnTheme,
     fonts: PkmnWebFontsOptions,
     icons: PkmnIconsOptions,
+    typhography: PkmnTypographyOptions,
     /*     shortcuts:PkmnShortcuts,
     typhography:PkmnTypographyOptions,
     rules:PkmnRules, */

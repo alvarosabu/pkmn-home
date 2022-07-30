@@ -11,6 +11,7 @@ export default defineNuxtConfig({
       fields: ['icon'],
     },
   },
+  ssr: false,
   nitro: {
     publicAssets: [
       {

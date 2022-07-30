@@ -12,6 +12,6 @@ export default defineConfig({
   theme: PkmnUI.unoconfig.theme,
   /* shortcuts: PkmnUI.unoconfig.shortcuts,
   rules: PkmnUI.unoconfig.rules, */
-  presets: [presetUno(), presetWebFonts(PkmnUI.unoconfig.fonts)],
+  presets: [presetUno(), presetWebFonts(PkmnUI.unoconfig.fonts), presetTypography(PkmnUI.unoconfig.typography)],
   transformers: [transformerDirectives(), transformerVariantGroup()],
 })

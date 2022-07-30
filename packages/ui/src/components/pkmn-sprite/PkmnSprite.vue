@@ -47,7 +47,7 @@ const sprite = computed(() => {
 
 const styles = computed(() => ({
   width: `${props.size}px`,
-  height: `${props.size}px`,
+  /*   height: `${props.size}px`, */
 }))
 </script>
 <template>

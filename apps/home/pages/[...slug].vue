@@ -1,5 +1,5 @@
 <template>
-  <main class="container mx-auto sm:pt-40">
+  <main class="mx-auto sm:pt-40 prose">
     <ContentDoc />
   </main>
 </template>
